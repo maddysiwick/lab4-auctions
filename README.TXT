@@ -23,3 +23,8 @@ How to start this project:
     + Enter a bid for the lot by calling the makeABid method on
       the Auction object. Pass the number of the lot, the Person
       who is bidding, and the amount of the bid.
+
+50. This would mess up the getLot method, as it relies on the lot number being one more
+than its index in the list. Calling anything after the removed lot would result in getting the
+index after it.
+51.
