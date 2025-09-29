@@ -27,4 +27,27 @@ How to start this project:
 50. This would mess up the getLot method, as it relies on the lot number being one more
 than its index in the list. Calling anything after the removed lot would result in getting the
 index after it.
-51.
+53. The linked list seems quite similar to an ArrayList, but as it focuses on every element 
+being linked to the previous element, all the methods are either focused on the before or last 
+element to avoid breaking the chain.
+54. public int countMembersMonth(int month){ 
+        int counter = 0;
+        for(Membership member : members){
+            if(member.getMonth() == month){
+                counter++;
+            }
+        }
+        return counter;
+}
+
+55. public ArrayList<Membership> purge(int month,int year){ 
+        int counter = 0;
+        ArrayList<Membership> purgedMembers = new ArrayList<>();
+        for(Membership member : members){
+            if(member.getMonth() == month && member.getYear() == year){
+                purgedMembers.add(member);
+                members.remove(counter)
+            }
+            counter++;
+        }
+        return purgedMembers;
